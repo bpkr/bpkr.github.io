@@ -1585,7 +1585,14 @@ function Main_js() {
 
     window.basic_login_service = Apperyio.datasources.basic_login_service = new Apperyio.DataSource(pkrDB_login_service, {
         "onBeforeSend": function(jqXHR) {
+            
+       var bytes = Crypto.charenc.Binary.stringToBytes('b:1');
+       var base64 = Crypto.util.bytesToBase64(bytes);
+       var basicAuth = "Basic " + base64;
+       jqXHR.headers({"Authorization":basicAuth});      
+    }
             //Apperyio.processMappingAction(Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"]);
+
         },
         "onComplete": function(jqXHR, textStatus) {
 
