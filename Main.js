@@ -158,7 +158,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -419,7 +419,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -453,7 +453,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -792,7 +792,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -829,7 +829,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -866,7 +866,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -1094,7 +1094,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -1325,7 +1325,7 @@ function Main_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -1397,7 +1397,7 @@ function Main_js() {
 
         ]
     };
-
+   /*
     Apperyio.mappings["Main_basic_login_service_onsuccess_mapping_0"] = {
         "homeScreen": "Main",
         "directions": [
@@ -1422,7 +1422,7 @@ function Main_js() {
         }
 
         ]
-    };
+    };*/
 
     Apperyio.datasources = Apperyio.datasources || {};
 
@@ -1589,11 +1589,14 @@ function Main_js() {
 
     window.basic_login_service = Apperyio.datasources.basic_login_service = new Apperyio.DataSource(pkrDB_login_service, {
         "onBeforeSend": function(jqXHR) {
-        var bytes = Crypto.charenc.Binary.stringToBytes('b:1');
+            var user = localStorage.getItem('user');
+            var password = localStorage.getItem('password');
+
+       var bytes = Crypto.charenc.Binary.stringToBytes(user+':'+password);
        var base64 = Crypto.util.bytesToBase64(bytes);
        var basicAuth = "Basic " + base64;
-       jqXHR.headers({"Authorization":basicAuth});      
-        //Apperyio.processMappingAction(Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"]);
+       localStorage.setItem('userSessionToken', basicAuth);
+       Apperyio.processMappingAction(Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"]);
 
         },
         "onComplete": function(jqXHR, textStatus) {
