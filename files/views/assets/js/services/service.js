@@ -3,7 +3,7 @@
  */
 var pkrDB_settings = {
     "database_url": "https://baas.kinvey.com/appdata/kid_Sy59jI_Q",
-    "database_id": "531f0bdde4b06b74b83548ad" //not sure if this is used in kinvey
+    "Authorization":"Basic Yjox"
 }
 
 /*
@@ -11,13 +11,13 @@ var pkrDB_settings = {
  */
 
 var pkrDB_Players_list_service = new Apperyio.RestService({
-    'url': '{database_url}/Players',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/Players',
     'dataType': 'json',
     'type': 'get'
 });
 
 var pkrDB_Transactions_list_service = new Apperyio.RestService({
-    'url': '{database_url}/Transactions',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/Transactions',
     'dataType': 'json',
     'type': 'get',
 
@@ -32,13 +32,13 @@ var session_service = new Apperyio.RestService({
 });
 
 var updateBankBalance_service = new Apperyio.RestService({
-    'url': '{database_url}/updateBankBalance',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/updateBankBalance',
     'dataType': 'json',
     'type': 'get',
 });
 
 var pkrDB_BankBalance_list_service = new Apperyio.RestService({
-    'url': '{database_url}/BankBalance',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/BankBalance',
     'dataType': 'json',
     'type': 'get',
 
@@ -46,7 +46,7 @@ var pkrDB_BankBalance_list_service = new Apperyio.RestService({
 });
 
 var pkrDB_Transactions_create_service = new Apperyio.RestService({
-    'url': '{database_url}/Transactions',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/Transactions',
     'dataType': 'json',
     'type': 'post',
     'contentType': 'application/json',
@@ -61,7 +61,7 @@ var pkrDB_login_service = new Apperyio.RestService({
 });
 
 var updatePlayersStats_service = new Apperyio.RestService({
-    'url': '{database_url}/updatePlayersStats',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/updatePlayersStats',
     'dataType': 'json',
     'type': 'get',
 });
@@ -79,7 +79,7 @@ var odataservice = new Apperyio.RestService({
 });
 
 var pkrDB_GamesResults_create_service = new Apperyio.RestService({
-    'url': '{database_url}/GamesResults',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/GamesResults',
     'dataType': 'json',
     'type': 'post',
     'contentType': 'application/json',
@@ -88,7 +88,7 @@ var pkrDB_GamesResults_create_service = new Apperyio.RestService({
 });
 
 var pkrDB_GamesResults_list_service = new Apperyio.RestService({
-    'url': '{database_url}/GamesResults',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/GamesResults',
     'dataType': 'json',
     'type': 'get',
 
@@ -96,7 +96,7 @@ var pkrDB_GamesResults_list_service = new Apperyio.RestService({
 });
 
 var pkrDB_PlayersStats_list_service = new Apperyio.RestService({
-    'url': '{database_url}/PlayersStats',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/PlayersStats',
     'dataType': 'json',
     'type': 'get',
 
