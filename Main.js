@@ -146,8 +146,7 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}",
-                    "Authorization": "Basic Yjox"
+                    "X-Appery-Database-Id": "{database_id}"
                 },
                 "parameters": {},
                 "body": null
@@ -260,7 +259,6 @@ function Main_js() {
             "to_default": {
                 "headers": {
                     "X-Appery-Database-Id": "{database_id}",
-                    "Authorization": "Basic Yjox",
                     "Content-Type": "application/json"
                 },
                 "parameters": {},
@@ -1384,8 +1382,7 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}",
-                    "Authorization": "Basic Yjox"
+                    "X-Appery-Database-Id": "{database_id}"
                 },
                 "parameters": {},
                 "body": null
@@ -1412,8 +1409,7 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}",
-                    "Authorization": "Basic Yjox"
+                    "X-Appery-Database-Id": "{database_id}"
                 },
                 "parameters": {},
                 "body": null

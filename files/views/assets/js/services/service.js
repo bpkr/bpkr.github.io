@@ -67,13 +67,7 @@ var updatePlayersStats_service = new Apperyio.RestService({
 });
 
 var RESTMailService = new Apperyio.RestService({
-    'url': 'http://bpoker2014.appspot.com/mail',
-    'dataType': 'json',
-    'type': 'get',
-});
-
-var odataservice = new Apperyio.RestService({
-    'url': 'http://services.odata.org/V3/OData/OData.svc/Categories',
+    'url': 'https://bpoker2014.appspot.com/mail',
     'dataType': 'json',
     'type': 'get',
 });

@@ -100,7 +100,7 @@ function BankBalance_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -248,7 +248,7 @@ function BankBalance_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -280,7 +280,7 @@ function BankBalance_js() {
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 

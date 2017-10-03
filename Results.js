@@ -166,7 +166,7 @@ return "<table><tr><td>" + str + "</td></tr></table>";
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
@@ -270,7 +270,7 @@ return "<table><tr><td>" + str + "</td></tr></table>";
             {
 
                 "source": "$",
-                "target": "$['headers']['X-Appery-Session-Token']"
+                "target": "$['headers']['Authorization']"
 
             }
 
