@@ -1591,9 +1591,9 @@ function Main_js() {
         "onBeforeSend": function(jqXHR) {
             var user = localStorage.getItem('user');
             var password = localStorage.getItem('password');
-
-       var bytes = Crypto.charenc.Binary.stringToBytes(user+':'+password);
-       var base64 = Crypto.util.bytesToBase64(bytes);
+            var base64 = btoa(user+':'+password);
+    //    var bytes = Crypto.charenc.Binary.stringToBytes(user+':'+password);
+    //    var base64 = Crypto.util.bytesToBase64(bytes);
        var basicAuth = "Basic " + base64;
        localStorage.setItem('userSessionToken', basicAuth);
        Apperyio.processMappingAction(Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"]);
