@@ -226,8 +226,9 @@ return "<table><tr><td>" + str + "</td></tr></table>";
     Apperyio.mappings["Results_PlayersStats_list_service_onbeforesend_mapping_0"] = {
         "homeScreen": "Results",
         "directions": [
-
         {
+            "from_name": "userSessionToken",
+            "from_type": "LOCAL_STORAGE",
 
             "to_name": "PlayersStats_list_service",
             "to_type": "SERVICE_REQUEST",
@@ -240,7 +241,16 @@ return "<table><tr><td>" + str + "</td></tr></table>";
                 "body": null
             },
 
-            "mappings": []
+            "mappings": [
+
+            {
+
+                "source": "$",
+                "target": "$['headers']['Authorization']"
+
+            }
+
+            ]
         }
 
         ]
