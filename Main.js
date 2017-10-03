@@ -1338,7 +1338,43 @@ function Main_js() {
     Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"] = {
         "homeScreen": "Main",
         "directions": [
+            {
+                "from_name": "userSessionToken",
+                "from_type": "LOCAL_STORAGE",
+    
+                "to_name": "basic_login_service",
+                "to_type": "SERVICE_REQUEST",
+    
+                "to_default": {
+                    "headers": {
+                        "X-Appery-Database-Id": "{database_id}",
+                        "Content-Type": "application/json"
+                    },
+                    "parameters": {},
+                    "body": {
+                        "type": "Game",
+                        "acl": {
+                            "*": {
+                                "write": true,
+                                "read": true
+                            }
+                        }
+                    }
+                },
+    
+                "mappings": [
+    
+                {
+    
+                    "source": "$",
+                    "target": "$['headers']['Authorization']"
+    
+                }
+    
+                ]
+            }
 
+        /*,
         {
             "from_name": "user",
             "from_type": "LOCAL_STORAGE",
@@ -1393,7 +1429,7 @@ function Main_js() {
             }
 
             ]
-        }
+        }*/
 
         ]
     };
@@ -1592,8 +1628,6 @@ function Main_js() {
             var user = localStorage.getItem('user');
             var password = localStorage.getItem('password');
             var base64 = btoa(user+':'+password);
-    //    var bytes = Crypto.charenc.Binary.stringToBytes(user+':'+password);
-    //    var base64 = Crypto.util.bytesToBase64(bytes);
        var basicAuth = "Basic " + base64;
        localStorage.setItem('userSessionToken', basicAuth);
        Apperyio.processMappingAction(Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"]);
