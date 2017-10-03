@@ -146,7 +146,8 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}"
+                    "X-Appery-Database-Id": "{database_id}",
+                    "Authorization": "Basic Yjox"
                 },
                 "parameters": {},
                 "body": null
@@ -259,6 +260,7 @@ function Main_js() {
             "to_default": {
                 "headers": {
                     "X-Appery-Database-Id": "{database_id}",
+                    "Authorization": "Basic Yjox",
                     "Content-Type": "application/json"
                 },
                 "parameters": {},
@@ -1332,7 +1334,7 @@ function Main_js() {
 
         ]
     };
-/*
+
     Apperyio.mappings["Main_basic_login_service_onbeforesend_mapping_0"] = {
         "homeScreen": "Main",
         "directions": [
@@ -1346,7 +1348,8 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}"
+                    "X-Appery-Database-Id": "{database_id}",
+                    "Authorization": "Basic Yjox"
                 },
                 "parameters": {},
                 "body": null
@@ -1373,7 +1376,8 @@ function Main_js() {
 
             "to_default": {
                 "headers": {
-                    "X-Appery-Database-Id": "{database_id}"
+                    "X-Appery-Database-Id": "{database_id}",
+                    "Authorization": "Basic Yjox"
                 },
                 "parameters": {},
                 "body": null
@@ -1418,7 +1422,7 @@ function Main_js() {
         }
 
         ]
-    };*/
+    };
 
     Apperyio.datasources = Apperyio.datasources || {};
 

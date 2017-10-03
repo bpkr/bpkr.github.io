@@ -3,7 +3,7 @@
  */
 var pkrDB_settings = {
     "database_url": "https://baas.kinvey.com/appdata/kid_Sy59jI_Q",
-    "Authorization":"Basic Yjox"
+    "database_id":"Basic Yjox"
 }
 
 /*
