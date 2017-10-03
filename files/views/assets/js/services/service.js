@@ -55,7 +55,7 @@ var pkrDB_Transactions_create_service = new Apperyio.RestService({
 });
 
 var pkrDB_login_service = new Apperyio.RestService({
-    'url': 'https://b:1@baas.kinvey.com/appdata/kid_Sy59jI_Q/login',
+    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/login',
     'dataType': 'json',
     'type': 'get'
 });
