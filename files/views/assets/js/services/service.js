@@ -56,7 +56,10 @@ var pkrDB_login_service = new Apperyio.RestService({
 var updatePlayersStats_service = new Apperyio.RestService({
     'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/updatePlayersStats',
     'dataType': 'json',
-    'type': 'get',
+    'type': 'post',
+    'contentType': 'application/json',
+
+    'serviceSettings': pkrDB_settings
 });
 
 var RESTMailService = new Apperyio.RestService({
