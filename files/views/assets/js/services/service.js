@@ -25,7 +25,7 @@ var pkrDB_Transactions_list_service = new Apperyio.RestService({
 });
 
 var updateBankBalance_service = new Apperyio.RestService({
-    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/custom/updateBankBalance',
+    'url': 'https://baas.kinvey.com/rpc/kid_Sy59jI_Q/custom/updateBankBalance',
     'dataType': 'json',
     'type': 'get',
 });
@@ -54,7 +54,7 @@ var pkrDB_login_service = new Apperyio.RestService({
 });
 
 var updatePlayersStats_service = new Apperyio.RestService({
-    'url': 'https://baas.kinvey.com/appdata/kid_Sy59jI_Q/custom/updatePlayersStats',
+    'url': 'https://baas.kinvey.com/rpc/kid_Sy59jI_Q/custom/updatePlayersStats',
     'dataType': 'json',
     'type': 'post',
     'contentType': 'application/json',
