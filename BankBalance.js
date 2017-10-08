@@ -501,6 +501,13 @@ function BankBalance_js() {
                     });
 
                 }
+                try {
+                    BankBalance_list_service.execute({});
+                } catch (e) {
+                    console.error(e);
+                    hideSpinner();
+                };
+
             },
         }, '#BankBalance_mobilefooter [name="CustomNavFooter_79_mobilenavbaritem_42"]');
 

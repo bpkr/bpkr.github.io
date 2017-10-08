@@ -452,8 +452,15 @@ return "<table><tr><td>" + str + "</td></tr></table>";
                     Apperyio.navigateTo('Results', {
                         reverse: false
                     });
-
                 }
+                try {
+                    PlayersStats_list_service.execute({});
+                } catch (e) {
+                    console.error(e);
+                    hideSpinner();
+                };
+
+
             },
         }, '#Results_mobilefooter [name="CustomNavFooter_79_mobilenavbaritem_3"]');
         $(document).off("click", '#Results_mobilefooter [name="CustomNavFooter_79_mobilenavbaritem_42"]').on({
