@@ -27,7 +27,10 @@ var pkrDB_Transactions_list_service = new Apperyio.RestService({
 var updateBankBalance_service = new Apperyio.RestService({
     'url': 'https://baas.kinvey.com/rpc/kid_Sy59jI_Q/custom/updateBankBalance',
     'dataType': 'json',
-    'type': 'get',
+    'type': 'post',
+    'contentType': 'application/json',
+
+    'serviceSettings': pkrDB_settings
 });
 
 var pkrDB_BankBalance_list_service = new Apperyio.RestService({
