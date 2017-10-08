@@ -239,11 +239,6 @@ function showPlayerInList(player) {
     });
 }
 
-function onSubmit() {
-    
-    
-    
-}
 
 function formattedDate() {
     var d = new Date(Date.now()),
