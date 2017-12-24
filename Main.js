@@ -1488,7 +1488,14 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             try {
-                updatePlayersStats.execute({});
+                updatePlayersStats.execute({
+                    success: function( e ) { 
+                        //Success handler here 
+                        Apperyio.navigateTo('Results', {
+                            reverse: false
+                        }); 
+                    }
+                });
             } catch (e) {
                 console.error(e);
                 hideSpinner();
@@ -1511,9 +1518,7 @@ function Main_js() {
                 console.error(e);
                 hideSpinner();
             };
-            Apperyio.navigateTo('Results', {
-                reverse: false
-            });
+           
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
