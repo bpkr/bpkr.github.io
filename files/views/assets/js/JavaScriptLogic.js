@@ -80,7 +80,7 @@ function onHostChanged() {
     var playersList = [];
     
     var checksum = 0;
-    var PAY_TO_HOST = -5;
+    var PAY_TO_HOST = -10;
     
     var t = $("[name=mobiletextinput_17]");
     
