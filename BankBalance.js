@@ -502,7 +502,8 @@ function BankBalance_js() {
 
                 }
                 try {
-                    BankBalance_list_service.execute({});
+                    updateBankBalance.execute({});
+                    //BankBalance_list_service.execute({});
                 } catch (e) {
                     console.error(e);
                     hideSpinner();
