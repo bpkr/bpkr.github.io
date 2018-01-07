@@ -454,7 +454,8 @@ return "<table><tr><td>" + str + "</td></tr></table>";
                     });
                 }
                 try {
-                    PlayersStats_list_service.execute({});
+                    restupdatePlayersStats.execute({});
+                    //PlayersStats_list_service.execute({});
                 } catch (e) {
                     console.error(e);
                     hideSpinner();
