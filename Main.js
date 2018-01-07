@@ -1339,10 +1339,10 @@ function Main_js() {
             {
                 "from_name": "userSessionToken",
                 "from_type": "LOCAL_STORAGE",
-    
+
                 "to_name": "basic_login_service",
                 "to_type": "SERVICE_REQUEST",
-    
+
                 "to_default": {
                     "headers": {
                         "X-Appery-Database-Id": "{database_id}",
@@ -1359,16 +1359,16 @@ function Main_js() {
                         }
                     }
                 },
-    
+
                 "mappings": [
-    
+
                 {
-    
+
                     "source": "$",
                     "target": "$['headers']['Authorization']"
-    
+
                 }
-    
+
                 ]
             }
 
@@ -1489,11 +1489,11 @@ function Main_js() {
         "onSuccess": function(data) {
             try {
                 updatePlayersStats.execute({
-                    success: function( e ) { 
-                        //Success handler here 
+                    success: function( e ) {
+                        //Success handler here
                         Apperyio.navigateTo('Results', {
                             reverse: false
-                        }); 
+                        });
                     }
                 });
             } catch (e) {
@@ -1518,7 +1518,7 @@ function Main_js() {
                 console.error(e);
                 hideSpinner();
             };
-           
+
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
@@ -1558,6 +1558,12 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             Apperyio.processMappingAction(Apperyio.mappings["Main_Transactions_create_service_onsuccess_mapping_0"]);
+            try {
+                updateBankBalance.execute({});
+            } catch (e) {
+                console.error(e);
+                hideSpinner();
+            };
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
@@ -1571,9 +1577,6 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             Apperyio.processMappingAction(Apperyio.mappings["Main_updateBankBalance_onsuccess_mapping_0"]);
-            Apperyio.navigateTo('BankBalance', {
-                reverse: false
-            });
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
@@ -1620,7 +1623,14 @@ function Main_js() {
         "onComplete": function(jqXHR, textStatus) {
 
         },
-        "onSuccess": function(data) {},
+        "onSuccess": function(data) {
+          try {
+              updateBankBalance.execute({});
+          } catch (e) {
+              console.error(e);
+              hideSpinner();
+          };
+        },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
 
@@ -1663,7 +1673,7 @@ function Main_js() {
                 });
             };
         }
-		
+
     });
 
     Apperyio.CurrentScreen = 'Main';
