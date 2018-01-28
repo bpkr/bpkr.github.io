@@ -1487,13 +1487,7 @@ function Main_js() {
 
         },
         "onSuccess": function(data) {
-            try {
-              copyResultsToClipboard();
-            } catch (e) {
-                console.error(e);
-            };
-            try {
-                
+            try {                
                 updatePlayersStats.execute({
                     success: function( e ) {
                         //Success handler here
@@ -1854,7 +1848,7 @@ function Main_js() {
             },
         }, '#Main_mobilecontainer [name="mobileselectmenu_150"]');
 
-        $(document).off("click focus", '#Main_mobilefooter [name="mobilebutton_25"]').on({
+        $(document).off("click", '#Main_mobilefooter [name="mobilebutton_25"]').on({
             click: function(event) {
                 if (!$(this).attr('disabled')) {
                     try {
@@ -1863,22 +1857,20 @@ function Main_js() {
                         console.error(e);
                         hideSpinner();
                     };
-
                 }
-            },
-            focus: function(event) {
-                if ($("[name=mobilebutton_25]").attr("disabled") == "disabled") alert("No players selected or checksum is not 0");
-            },
+                else {
+                    copyResultsToClipboard();
+                    alert("No players selected or checksum is not 0");
+                }
+            }
         }, '#Main_mobilefooter [name="mobilebutton_25"]');
-        $(document).off("click focus", '#Main_mobilefooter [name="mobilebutton_125"]').on({
+        $(document).off("click", '#Main_mobilefooter [name="mobilebutton_125"]').on({
             click: function(event) {
                 if (!$(this).attr('disabled')) {
                     var isPizza = $("[name=mobilecheckbox_153]").find("input").is(':checked');
 
                     if (isPizza) localStorage.setItem('transactionType', 'pizza');
                     else localStorage.setItem('transactionType', 'bank');
-
-                    ;
                     try {
                         Transactions_create_service_withNavigateToBankPage.execute({});
                     } catch (e) {
@@ -1887,10 +1879,10 @@ function Main_js() {
                     };
 
                 }
-            },
-            focus: function(event) {
-                if ($("[name=mobilebutton_25]").attr("disabled") === "disabled" || $("[name=mobilebutton_125]").attr("disabled") === "disabled") alert("No players selected or checksum is not 0");
-            },
+                else {  // if ( $("[name=mobilebutton_125]").attr("disabled") === "disabled") 
+                    alert("No players selected or checksum is not 0");
+                }
+            }
         }, '#Main_mobilefooter [name="mobilebutton_125"]');
 
         $(document).off("click", '#Main_mobilefooter [name="CustomNavFooter_108_mobilenavbaritem_2"]').on({
