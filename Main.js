@@ -1488,6 +1488,12 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             try {
+              copyResultsToClipboard();
+            } catch (e) {
+                console.error(e);
+            };
+            try {
+                
                 updatePlayersStats.execute({
                     success: function( e ) {
                         //Success handler here
