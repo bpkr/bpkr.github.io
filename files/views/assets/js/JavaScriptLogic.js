@@ -331,9 +331,10 @@ function copyTextToClipboard(text) {
 }
 
 function copyResultsToClipboard() {
-   var text = "";
-   text+= localStorage.getItem('gameDate')+ "   host: "+localStorage.getItem('hostPlayer'); 
-   text+= localStorage.getItem('gameResults');
+   var text = "Poker ";
+   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\n";	
+   text+= localStorage.getItem('gameResults').replace(/,/g, "\n");
+   text+="\n" + localStorage.getItem('comments');
    copyTextToClipboard(text);
 }
 
