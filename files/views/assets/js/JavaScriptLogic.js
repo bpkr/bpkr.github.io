@@ -316,7 +316,7 @@ function onPizzaClick() {
 }
 
 function copyTextToClipboard(text) {
-	alert("copyTextToClipboard  "+text);
+	alert(text);
   var clipboardInput = document.getElementById('clipboardInput');
   if (!clipboardInput) {
     clipboardInput = document.createElement("input");
@@ -334,7 +334,9 @@ function copyResultsToClipboard() {
    var text = "Poker ";
    text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\n";	
    text+= localStorage.getItem('gameResults').replace(/,/g, "\n");
-   text+="\n" + localStorage.getItem('comments');
+   var comments = localStorage.getItem('comments');		
+   if (comments)
+	   text+="\n" + comments
    copyTextToClipboard(text);
 }
 
