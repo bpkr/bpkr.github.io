@@ -316,7 +316,6 @@ function onPizzaClick() {
 }
 
 function copyTextToClipboard(text) {
-	alert(text);
   var clipboardInput = document.getElementById('clipboardInput');
   if (!clipboardInput) {
     clipboardInput = document.createElement("input");
@@ -342,9 +341,30 @@ function copyTextToClipboard(text) {
   //clipboardInput.select();
   document.execCommand('copy');
   clipboardInput.setAttribute('hidden', true);
-	window.open("whatsapp://send?text="+text,"_self")
+	
 }
 
+function sendResultsToWhatsApp() {
+   var text = "Poker  ";
+   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"%0A";	
+   text+= localStorage.getItem('gameResults').replace(/,/g, "%0A");
+   var comments = localStorage.getItem('comments');		
+   if (comments)
+	   text+="%0A%0A" + comments
+   
+  window.open("whatsapp://send?text="+text,"_self")
+}
+
+function sendBankToWhatsApp() {
+   var text = "Bank  ";
+   text+= localStorage.getItem('gameDate') + "%0A";	
+   text+= localStorage.getItem('gameResults').replace(/,/g, "%0A");
+   var comments = localStorage.getItem('comments');		
+   if (comments)
+	   text+="%0A%0A" + comments
+   
+  window.open("whatsapp://send?text="+text,"_self")
+}
 function copyResultsToClipboard() {
    var text = "W1 Poker %0A ";
    text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\r\n";	
