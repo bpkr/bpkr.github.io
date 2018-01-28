@@ -315,7 +315,7 @@ function onPizzaClick() {
     
 }
 
-function copyToClipboard(text) {
+function copyTextToClipboard(text) {
   var clipboardInput = document.getElementById('clipboardInput');
   if (!clipboardInput) {
     clipboardInput = document.createElement("input");
@@ -327,5 +327,12 @@ function copyToClipboard(text) {
   clipboardInput.select();
   document.execCommand('copy');
   clipboardInput.setAttribute('hidden', true);
+}
+
+function copyResultsToClipboard() {
+   var text = "";
+   text+= localStorage.getItem('gameDate')+ "   host: "+localStorage.getItem('hostPlayer'); 
+   text+= localStorage.getItem('gameResults');
+   copyTextToClipboard(text);
 }
 
