@@ -322,22 +322,35 @@ function copyTextToClipboard(text) {
     clipboardInput = document.createElement("input");
     clipboardInput.id = 'clipboardInput';
     clipboardInput.type = "text";
+	  
+	clipboardInput.contentEditable = true;
+	clipboardInput.readOnly = true;
+	  
     document.body.appendChild(clipboardInput); 
   }
   clipboardInput.setAttribute('value', text);
   clipboardInput.removeAttribute('hidden');
-  clipboardInput.select();
+        // create a selectable range
+        var range = document.createRange();
+        range.selectNodeContents(clipboardInput);
+	        // select the range
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        clipboardInput.setSelectionRange(0, 999999);
+	
+  //clipboardInput.select();
   document.execCommand('copy');
   clipboardInput.setAttribute('hidden', true);
 }
 
 function copyResultsToClipboard() {
    var text = "Poker ";
-   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\r\n";	
-   text+= localStorage.getItem('gameResults').replace(/,/g, "\r\n");
+   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\n";	
+   text+= localStorage.getItem('gameResults').replace(/,/g, "\n");
    var comments = localStorage.getItem('comments');		
    if (comments)
-	   text+="\r\n" + comments
+	   text+="\n\n" + comments
    copyTextToClipboard(text);
 }
 
