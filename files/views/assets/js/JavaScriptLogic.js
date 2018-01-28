@@ -342,6 +342,7 @@ function copyTextToClipboard(text) {
   //clipboardInput.select();
   document.execCommand('copy');
   clipboardInput.setAttribute('hidden', true);
+	window.open("whatsapp://send?text="+text,"_self")
 }
 
 function copyResultsToClipboard() {
