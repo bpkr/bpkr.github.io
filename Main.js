@@ -1489,7 +1489,7 @@ function Main_js() {
         "onSuccess": function(data) {
             try {                
                 updatePlayersStats.execute({
-                    success: function( e ) {
+                    success: function( e ) {                        
                         //Success handler here
                         Apperyio.navigateTo('Results', {
                             reverse: false
@@ -1513,6 +1513,7 @@ function Main_js() {
                 hideSpinner();
             };
             try {
+                sendResultsToWhatsApp();
                 MailService.execute({});
             } catch (e) {
                 console.error(e);
@@ -1590,6 +1591,7 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             Apperyio.processMappingAction(Apperyio.mappings["Main_updateBankBalance_withNavigateToBankPage_onsuccess_mapping_0"]);
+            function sendBankToWhatsApp();
             Apperyio.navigateTo('BankBalance', {
                 reverse: false
             });
@@ -1859,7 +1861,6 @@ function Main_js() {
                     };
                 }
                 else {
-                    copyResultsToClipboard();
                     alert("No players selected or checksum is not 0");
                 }
             }
