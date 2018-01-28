@@ -315,3 +315,17 @@ function onPizzaClick() {
     
 }
 
+function copyToClipboard(text) {
+  var clipboardInput = document.getElementById('clipboardInput');
+  if (!clipboardInput) {
+    clipboardInput = document.createElement("input");
+    clipboardInput.type = "text";
+    document.body.appendChild(clipboardInput); 
+  }
+  clipboardInput.setAttribute('value', text);
+  clipboardInput.removeAttribute('hidden');
+  clipboardInput.select();
+  document.execCommand('copy');
+  clipboardInput.setAttribute('hidden', true);
+}
+
