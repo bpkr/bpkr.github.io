@@ -333,11 +333,11 @@ function copyTextToClipboard(text) {
 
 function copyResultsToClipboard() {
    var text = "Poker ";
-   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\n";	
-   text+= localStorage.getItem('gameResults').replace(/,/g, "\n");
+   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\r\n";	
+   text+= localStorage.getItem('gameResults').replace(/,/g, "\r\n");
    var comments = localStorage.getItem('comments');		
    if (comments)
-	   text+="\n" + comments
+	   text+="\r\n" + comments
    copyTextToClipboard(text);
 }
 
