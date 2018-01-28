@@ -320,6 +320,7 @@ function copyTextToClipboard(text) {
   var clipboardInput = document.getElementById('clipboardInput');
   if (!clipboardInput) {
     clipboardInput = document.createElement("input");
+    clipboardInput.id = 'clipboardInput';
     clipboardInput.type = "text";
     document.body.appendChild(clipboardInput); 
   }
