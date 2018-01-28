@@ -351,7 +351,7 @@ function copyResultsToClipboard() {
    text+= localStorage.getItem('gameResults').replace(/,/g, "\r\n");
    var comments = localStorage.getItem('comments');		
    if (comments)
-	   text+="<br>" + comments
+	   text+="%0A" + comments
    copyTextToClipboard(text);
 }
 
