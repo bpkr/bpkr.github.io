@@ -346,7 +346,7 @@ function copyTextToClipboard(text) {
 }
 
 function copyResultsToClipboard() {
-   var text = "W Poker ";
+   var text = "W1 Poker %0A ";
    text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"\r\n";	
    text+= localStorage.getItem('gameResults').replace(/,/g, "\r\n");
    var comments = localStorage.getItem('comments');		
