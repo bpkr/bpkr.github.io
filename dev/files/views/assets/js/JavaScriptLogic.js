@@ -50,17 +50,22 @@ function onPlayersListChange() {
     
     var selected = ''; 
     
-    var defaultHost = 'None';
+    var host = 'None';
+
+    if(newData.length > 0)
+        host = newData[0]; //set the first player in list as host
+
     for (i = 0; i < newData.length; i++) {
         if (newData[i] === 'David'){
             selected = 'selected="selected"';
-            defaultHost = 'David';
+            host = newData[i];
         }
         else 
             selected = '';
         dropDown.append('<option value="' + newData[i] + '" ' + selected + '>' + newData[i] + '</option>');
     }
-    localStorage.setItem('hostPlayer', defaultHost);
+
+    localStorage.setItem('hostPlayer', host);
     dropDown.selectmenu('refresh');
     onHostChanged();
 }
