@@ -1591,7 +1591,7 @@ function Main_js() {
         },
         "onSuccess": function(data) {
             Apperyio.processMappingAction(Apperyio.mappings["Main_updateBankBalance_withNavigateToBankPage_onsuccess_mapping_0"]);
-            function sendBankToWhatsApp();
+            sendBankToWhatsApp();
             Apperyio.navigateTo('BankBalance', {
                 reverse: false
             });
