@@ -1,0 +1,160 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.4.4/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilenavbar_179 */
+.BankBalance_mobilenavbar_179 {
+
+}
+.BankBalance_mobilenavbar_179 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .BankBalance_mobilenavbar_179 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .BankBalance_mobilenavbar_179 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.BankBalance_mobilenavbar_179 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}
+/* mobilecontainer */
+.ui-content.BankBalance_mobilecontainer {
+	padding: 15px 15px 15px 15px;
+}
+/* mobilelist_57 */
+.ui-page .BankBalance_mobilelist_57 {
+	margin: 15px 0px 0px 0px;
+}
+/* mobilelistitem_58 */
+/* mobilelistitembutton_59 */
+.BankBalance_mobilelistitembutton_59 {
+
+}
+/* mobilelist_135 */
+.ui-page .BankBalance_mobilelist_135 {
+	margin: 15px 0px 0px 0px;
+	display: none;
+}
+/* mobilelistitem_136 */
+.ui-mobile-viewport ul[data-role="listview"] li.BankBalance_mobilelistitem_136 {
+	padding: 0;
+	margin: 0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.BankBalance_mobilelistitem_136 .ui-li-static-container {
+	padding: 0px 0px 0px 0px;
+	padding-right: 10px;
+	padding-left: 0px;
+	min-height: 1em;
+	border-width:0;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.BankBalance_mobilelistitem_136.ui-icon-none .ui-li-static-container {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_137 */
+.BankBalance_mobilelistitembutton_137 {
+
+}
+/* mobilecollapsibleset_161 */
+.BankBalance_mobilecollapsibleset_161 {
+	margin: 0px 0px 0px 0px;
+}
+/* mobilecollapsblock_162 */
+.BankBalance_mobilecollapsblock_162 {
+
+}
+.BankBalance_mobilecollapsblock_162 .ui-collapsible-content {
+	padding: 0px 0px 0px 0px;
+}
+/* mobilegrid_173 */
+.BankBalance_mobilegrid_173 {
+	height: auto;
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.BankBalance_mobilegrid_173_wrapper {
+
+}
+.BankBalance_mobilegrid_173 > tr > td {
+	vertical-align: top;
+}
+.BankBalance_mobilegrid_173_row_0, .BankBalance_mobilegrid_173_row_0 > td {
+	height: auto
+}
+/* mobilegridcell_174 */
+.BankBalance_mobilegridcell_174 {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.BankBalance_mobilegridcell_174 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_178 */
+.BankBalance_mobilelabel_178 {
+	text-decoration: none; font-weight: bold; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilegridcell_175 */
+.BankBalance_mobilegridcell_175 {
+	height:auto !important;
+	width:auto;
+	padding: 0px 0px 0px 0px;
+}
+.BankBalance_mobilegridcell_175 > .cell-wrapper {
+	padding: 0;
+	margin: 0;
+}
+/* mobilelabel_171 */
+.BankBalance_mobilelabel_171 {
+	text-decoration: none; font-weight: bold; text-align: left; font-family: Helvetica; font-size: 14px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* html_165 */
+.BankBalance_html_165 {
+	margin: 8px 5px 8px 5px;
+	font-weight: normal;
+	width: auto; height: auto;
+}
+div.BankBalance_html_165 {
+	overflow: auto;
+}
+/* mobilelabel_166 */
+.BankBalance_mobilelabel_166 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+/* mobilefooter */
+.BankBalance_mobilefooter {
+	min-height:38px;
+}
+/* CustomNavFooter_79 */
+.BankBalance_CustomNavFooter_79 {
+	margin: 0px 0px 0px 0px;
+}
+/* CustomNavFooter_79_mobilenavbar_1 */
+.BankBalance_CustomNavFooter_79_mobilenavbar_1 {
+
+}
+.BankBalance_CustomNavFooter_79_mobilenavbar_1 .ui-grid-a .ui-block-a {
+	clear:none;
+}
+.ui-footer .BankBalance_CustomNavFooter_79_mobilenavbar_1 ul li:last-child a {
+	margin-right: 1px !important;
+}
+.ui-header .BankBalance_CustomNavFooter_79_mobilenavbar_1 ul li:last-child a {
+	margin-right: -1px !important;
+}
+.BankBalance_CustomNavFooter_79_mobilenavbar_1 ul.ui-grid-duo li:nth-child(even) a {
+	margin-right: 1px !important;
+}

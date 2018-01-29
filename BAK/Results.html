@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Results
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.4/jquery.mobile.structure-1.4.4.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.4/jquery.mobile-1.4.4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <link href="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.css" rel="stylesheet"
+        type="text/css" />
+        <script type="text/javascript" src="files/resources/lib/datepicker/jQuery.ui.datepicker.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/login.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/model.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/JavaScriptLogic.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/FacebookLogin.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/databaseUtils.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                        $(document).bind("mobileinit", function()
+                {
+                    $.mobile.page.prototype.options.degradeInputs.date = true;
+                });
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Results" id="Results" class="type-interior"
+        data-theme="a">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="a" name="mobileheader" id="Results_mobileheader" class="Results_mobileheader">
+                <h1 dsid="mobileheader">
+                    Games Results
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="Results_mobilecontainer" name="mobilecontainer" class="Results_mobilecontainer ui-content"
+            dsid="mobilecontainer" data-theme="a">
+                <link href="Results.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Results.js">
+                </script>
+                <!-- mobilelist_57 -->
+                <ol data-role="listview" id="Results_mobilelist_57" class="Results_mobilelist_57"
+                name="mobilelist_57" dsid="mobilelist_57" data-inset="true" data-theme="a" data-divider-theme="b"
+                data-count-theme="a" style="" data-icon="none">
+                    <!-- mobilelistitem_58 -->
+                    <li class="Results_mobilelistitem_58" data-icon="none">
+                        <a id="Results_mobilelistitem_58" name="mobilelistitem_58" dsid="mobilelistitem_58"
+                        tabindex="7" class="Results_mobilelistitem_58">
+                        <h3>Item 1</h3>
+                        <span class="ui-li-count">3</span>
+                        </a>
+                    </li>
+                </ol>
+                <!-- mobilebutton_74 --><!--
+                --><a data-role="button" name="mobilebutton_74" dsid="mobilebutton_74" class="Results_mobilebutton_74"
+                id="Results_mobilebutton_74" data-corners="true" data-icon="info" data-iconpos="left"
+                x-apple-data-detectors="false" data-mini="true" data-theme="a" tabindex="10">
+                List Games Results
+                </a><!--
+                --><!-- mobilecollapsibleset_46 -->
+                <div data-role="collapsible-set" data-mini="true" data-theme="a" data-content-theme=a
+                data-collapsed-icon='plus' data-expanded-icon='minus' name="mobilecollapsibleset_46"
+                id="Results_mobilecollapsibleset_46" dsid="mobilecollapsibleset_46" class="Results_mobilecollapsibleset_46">
+                    <!-- mobilecollapsblock_53 -->
+                    <div data-role="collapsible" id="Results_mobilecollapsblock_53" name="mobilecollapsblock_53"
+                    dsid="mobilecollapsblock_53" data-mini="true" data-collapsed="false" data-theme="a"
+                    data-content-theme="a" data-iconpos='left' class="Results_mobilecollapsblock_53"
+                    reRender='mobilecollapsibleset_46'>
+                        <h3 id="Results_mobilecollapsblockheader_54" name="mobilecollapsblockheader_54"
+                        dsid="mobilecollapsblockheader_54">
+                            text
+                        </h3>
+                        <!-- html_81 -->
+                        <div data-role="appery_html" name="html_81" dsid="html_81" id="Results_html_81"
+                        class="Results_html_81">
+                        </div>
+                        <!-- mobilelabel_78 -->
+                        <div name="mobilelabel_78" id="Results_mobilelabel_78" dsid="mobilelabel_78" data-role="appery_label"
+                        class="Results_mobilelabel_78">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class="Results_mobilefooter" name="mobilefooter"
+            dsid="mobilefooter" id="Results_mobilefooter" data-theme="a">
+                <!-- CustomNavFooter_79 -->
+                <div id="Results_CustomNavFooter_79" class="tiggzi-mobiletemplate Results_CustomNavFooter_79"
+                dsid="CustomNavFooter_79" tiggzitype="mobiletemplate" apperytype="mobiletemplate">
+                    <!-- CustomNavFooter_79_mobilenavbar_1 -->
+                    <div data-role="navbar" id="Results_CustomNavFooter_79_mobilenavbar_1" name="CustomNavFooter_79_mobilenavbar_1"
+                    dsid="CustomNavFooter_79_mobilenavbar_1" class="Results_CustomNavFooter_79_mobilenavbar_1"
+                    data-theme="a" style="position: relative;">
+                        <ul>
+                            <!-- CustomNavFooter_79_mobilenavbaritem_2 -->
+                            <li>
+                                <a data-theme="a" data-icon="plus" id="Results_CustomNavFooter_79_mobilenavbaritem_2"
+                                dsid="CustomNavFooter_79_mobilenavbaritem_2" name="CustomNavFooter_79_mobilenavbaritem_2"
+                                Active="true">
+                                Add
+                                </a>
+                            </li>
+                            <!-- CustomNavFooter_79_mobilenavbaritem_3 -->
+                            <li>
+                                <a data-theme="a" class="ui-btn-active ui-state-persist" data-icon="grid" id="Results_CustomNavFooter_79_mobilenavbaritem_3"
+                                dsid="CustomNavFooter_79_mobilenavbaritem_3" name="CustomNavFooter_79_mobilenavbaritem_3">
+                                Results
+                                </a>
+                            </li>
+                            <!-- CustomNavFooter_79_mobilenavbaritem_42 -->
+                            <li>
+                                <a data-theme="a" data-icon="calendar" id="Results_CustomNavFooter_79_mobilenavbaritem_42"
+                                dsid="CustomNavFooter_79_mobilenavbaritem_42" name="CustomNavFooter_79_mobilenavbaritem_42">
+                                Bank
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
