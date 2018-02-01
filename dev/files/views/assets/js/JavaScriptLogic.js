@@ -1,5 +1,25 @@
 function onLoad() {
-    
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
     var gamedate = formattedDate();
     $('[tabindex="1"]').val(gamedate); //set the input value
     localStorage.setItem('gameDate', gamedate);
@@ -12,12 +32,17 @@ function onLoad() {
     Main_mobiledatepicker_5_dataPickerOptions.defaultDate = gamedate;
     
     localStorage.removeItem('playersList');
-    
+
+    if( isMobile.iOS() ) alert('iOS');
+    if( isMobile.Android() ) alert('Android');
+    if( isMobile.any() ) alert('Mobile');
    /* Apperyio('basicloginpopup').popup("open", {
                     transition: "popup"
                 });
     */   
 }
+
+
 
 function onDateValueChanged() {
     
