@@ -37,7 +37,7 @@ function onLoad() {
     localStorage.removeItem('playersList');
 
   
-    if( isMobile.Samsung() )
+    if( isMobile.iOS() )
     {
         alert("Samsung");
         var inputField = document.getElementById("Main_mobiletextinput_17");
