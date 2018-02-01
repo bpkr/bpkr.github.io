@@ -388,7 +388,7 @@ function copyTextToClipboard(text) {
 
 function sendResultsToWhatsApp() {
    var text = "Poker  ";
-   text+= localStorage.getItem('gameDate')+ "  Host "+localStorage.getItem('hostPlayer') +"%0A";	
+   text+= localStorage.getItem('gameDate')+ "  @"+localStorage.getItem('hostPlayer') +"%0A";	
    text+= localStorage.getItem('gameResults').replace(/,/g, "%0A");
    var comments = localStorage.getItem('comments');		
    if (comments)
