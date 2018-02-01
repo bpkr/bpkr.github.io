@@ -6,6 +6,9 @@ function onLoad() {
         BlackBerry: function() {
             return navigator.userAgent.match(/BlackBerry/i);
         },
+        Samsung: function() {
+            return navigator.userAgent.match(/Samsung/i);
+        },
         iOS: function() {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
@@ -33,9 +36,18 @@ function onLoad() {
     
     localStorage.removeItem('playersList');
 
-    if( isMobile.iOS() ) alert('iOS');
-    if( isMobile.Android() ) alert('Android');
-    if( isMobile.any() ) alert('Mobile');
+  
+    if( isMobile.Samsung() )
+    {
+        alert("Samsung");
+        var inputField = document.getElementById("Main_mobiletextinput_17");
+        if (inputField)
+        {
+            inputField.setAttribute("type","tel");
+        }
+    }
+    
+   
    /* Apperyio('basicloginpopup').popup("open", {
                     transition: "popup"
                 });
