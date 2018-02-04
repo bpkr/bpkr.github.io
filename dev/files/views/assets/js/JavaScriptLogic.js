@@ -36,10 +36,10 @@ function onLoad() {
     
     localStorage.removeItem('playersList');
 
-  
+    // workaround Samsung numeric keyboard bug
+    // using telephone input type instead of numeric
     if( isMobile.Samsung() )
     {
-        alert("Samsung");
         var inputField = document.getElementById("Main_mobiletextinput_17");
         if (inputField)
         {
