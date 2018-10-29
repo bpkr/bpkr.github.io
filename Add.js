@@ -81,11 +81,11 @@ Add_js = function(runBeforeShow) { /* Object & array with components "name-to-id
     var datasources = [];
 
     restservice2 = new Appery.DataSource(PokerDB_Players_list_service, {
-        'onComplete': function(jqXHR, textStatus) {
+        'onComplete': function(_jqXHR, textStatus) {
 
             $t.refreshScreenFormElements("Add");
         },
-        'onSuccess': function(data) {},
+        'onSuccess': function(_data) {},
         'onError': function(jqXHR, textStatus, errorThrown) {},
         'responseMapping': [{
             'PATH': ['$'],
