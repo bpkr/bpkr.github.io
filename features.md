@@ -1,10 +1,8 @@
-/*
-
 Tasks
 
 BANK
 
-1.DB 
+1.DB
 2.Transactions - deposit, withdraw, transfer
 3.Balance
 4.Update from game results
@@ -37,7 +35,3 @@ start with empty instead of 0
 DB add infrequent players
 Panel for adding infreq players
 Handle checkbox selection and not send results for player not played
-
-
-
-*/
