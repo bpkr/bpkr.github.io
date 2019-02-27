@@ -1,4 +1,28 @@
 function onLoad() {
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        Samsung: function() {
+            return navigator.userAgent.match(/Samsung/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
     
     var gamedate = formattedDate();
     $('[tabindex="1"]').val(gamedate); //set the input value
@@ -17,6 +41,14 @@ function onLoad() {
                     transition: "popup"
                 });
     */   
+   if( isMobile.Android())
+    {
+        var inputField = document.getElementById("Main_mobiletextinput_17");
+        if (inputField)
+        {
+            inputField.setAttribute("type","tel");
+        }
+    }
 }
 
 function onDateValueChanged() {
