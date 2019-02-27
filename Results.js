@@ -305,7 +305,7 @@ return "<table><tr><td>" + str + "</td></tr></table>";
 
         },
         "onSuccess": function(data) {
-            data = sortResultsByDate(data);
+           data = sortByDate(data);
             Apperyio.processMappingAction(Apperyio.mappings["Results_GamesResults_list_service_onsuccess_mapping_0"]);
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
@@ -319,8 +319,9 @@ return "<table><tr><td>" + str + "</td></tr></table>";
 
     function sortByDate(array) {
         compare = function compare(a,b) {
-            var x = stringToDate(a.date_string);
-            var y = stringToDate(b.date_string);
+            var x = stringToDate(b.date_string);
+            var y = stringToDate(a.date_string);
+                        
             if (x < y)
               return -1;
             if (x > y)

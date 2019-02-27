@@ -305,10 +305,30 @@ function BankBalance_js() {
 
         },
         "onSuccess": function(data) {
+            data = sortResultsByBalance(data);
             Apperyio.processMappingAction(Apperyio.mappings["BankBalance_BankBalance_list_service_onsuccess_mapping_0"]);
+
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
+
+    function sortResultsByBalance(array) {
+    
+        compare = function compare(a,b) {
+            var x = b.Balance;
+            var y = array.Balance;
+            if (x==0)
+                return -1;
+            if (y==0)
+                return 1;
+            if (x < y)
+              return -1;
+            if (x > y)
+              return 1;
+            return 0;
+          };
+        return array.sort(compare);
+    }
 
     window.Transactions_list_service = Apperyio.datasources.Transactions_list_service = new Apperyio.DataSource(pkrDB_Transactions_list_service, {
         "onBeforeSend": function(jqXHR) {
@@ -318,10 +338,31 @@ function BankBalance_js() {
 
         },
         "onSuccess": function(data) {
+            data=sortByDate(data);
             Apperyio.processMappingAction(Apperyio.mappings["BankBalance_Transactions_list_service_onsuccess_mapping_0"]);
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
+
+    function stringToDate(date_string) {
+        var from = date_string.split("/");
+        var to = new Date(from[2], from[1] - 1, from[0]);
+        return to;
+    }
+
+    function sortByDate(array) {
+        compare = function compare(a,b) {
+            var x = stringToDate(b.date_string);
+            var y = stringToDate(a.date_string);
+            
+            if (x < y)
+              return -1;
+            if (x > y)
+              return 1;
+            return 0;
+          };
+        return array.sort(compare);
+    }
 
     window.updateBankBalance = Apperyio.datasources.updateBankBalance = new Apperyio.DataSource(updateBankBalance_service, {
         "onBeforeSend": function(jqXHR) {
@@ -451,7 +492,6 @@ function BankBalance_js() {
                     toggle('BankBalance_mobilelist_57', 'mob', 'true');
                     Appery('mobilelist_57').prev().show();
                     Appery('mobilelist_135').prev().hide();
-
                 }
             },
         }, '#BankBalance_mobileheader [name="mobilenavbaritem_180"]');
