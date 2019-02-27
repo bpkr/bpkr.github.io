@@ -1,0 +1,23 @@
+{
+  "name": "my-test-server",
+  "version": "1.0.0",
+  "description": "edited from theia",
+  "main": "test-server/server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpkr/bpkr.github.io.git"
+  },
+  "author": "Boris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bpkr/bpkr.github.io/issues"
+  },
+  "homepage": "https://github.com/bpkr/bpkr.github.io#readme",
+  "dependencies": {
+    "finalhandler": "^1.1.1",
+    "serve-static": "^1.13.2"
+  }
+}
