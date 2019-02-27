@@ -305,10 +305,30 @@ return "<table><tr><td>" + str + "</td></tr></table>";
 
         },
         "onSuccess": function(data) {
+            data = sortResultsByDate(data);
             Apperyio.processMappingAction(Apperyio.mappings["Results_GamesResults_list_service_onsuccess_mapping_0"]);
         },
         "onError": function(jqXHR, textStatus, errorThrown) {}
     });
+
+    function stringToDate(date_string) {
+        var from = date_string.split("/");
+        var to = new Date(from[2], from[1] - 1, from[0]);
+        return to;
+    }
+
+    function sortByDate(array) {
+        compare = function compare(a,b) {
+            var x = stringToDate(a.date_string);
+            var y = stringToDate(b.date_string);
+            if (x < y)
+              return -1;
+            if (x > y)
+              return 1;
+            return 0;
+          };
+        return array.sort(compare);
+    }
 
     window.PlayersStats_list_service = Apperyio.datasources.PlayersStats_list_service = new Apperyio.DataSource(pkrDB_PlayersStats_list_service, {
         "onBeforeSend": function(jqXHR) {
