@@ -316,7 +316,7 @@ function BankBalance_js() {
     
         compare = function compare(a,b) {
             var x = b.Balance;
-            var y = array.Balance;
+            var y = a.Balance;
             if (x==0)
                 return -1;
             if (y==0)
