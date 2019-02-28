@@ -1,0 +1,25 @@
+{
+    "dir": "ltr",
+    "lang": "sl",
+    "name": "Poker",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://bpkr.github.io/",
+    "short_name": "Poker",
+    "theme_color": "rgba(0,0,0,0.5)",
+    "description": "",
+    "orientation": "any",
+    "background_color": "none",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "128x128"
+        }
+    ]
+}

@@ -1,27 +1,24 @@
-CACHE MANIFEST
-# 10-11-2014
-# v7
 
-#Windows command
-#dir /s/b /A:-D >list.txt
-
-# Explicitly cached entries
 /apple-touch-icon.png
 /BankBalance.css
 /BankBalance.html
 /BankBalance.js
+/basiclogin.html
+/descriptor.txt
 /favicon.ico
+/features.md
 /index.html
 /list.txt
 /Main.css
 /Main.html
 /Main.js
-#/manifest.appcache
-#/manifest.json
-
-#/pwabuilder-sw-register.js
-#/pwabuilder-sw.js
-
+/manifest.appcache
+/manifest.json
+/package-lock.json
+/package.json
+/pwabuilder-sw-register.js
+/pwabuilder-sw.js
+/README.md
 /Results.css
 /Results.html
 /Results.js
@@ -408,13 +405,3 @@ CACHE MANIFEST
 /files/views/assets/js/services/service_2.js
 /Images/favicon.ico
 
-
-
-
-# offline.html will be displayed if the user is offline
-#FALLBACK:
-#/ /offline.html
-
-# All other resources (e.g. sites) require the user to be online. 
-NETWORK:
-*
